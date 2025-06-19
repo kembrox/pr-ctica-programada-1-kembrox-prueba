@@ -1,7 +1,8 @@
 ﻿using Abstracciones.Interfaces.DA;
 using Abstracciones.Modelos;
-using Microsoft.Data.SqlClient;
 using Dapper;
+using Microsoft.Data.SqlClient;
+
 
 namespace DA
 {

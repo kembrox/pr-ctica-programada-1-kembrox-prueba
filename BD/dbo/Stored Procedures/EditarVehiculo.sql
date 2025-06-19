@@ -20,6 +20,7 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
+BEGIN TRANSACTION
 	UPDATE [dbo].[Vehiculo]
    SET [IdModelo] = @IdModelo
       ,[Placa] = @Placa
@@ -30,4 +31,5 @@ BEGIN
       ,[TelefonoPropietario] = @TelefonoPropietario
 	WHERE Id=@Id
 	SELECT @Id
+COMMIT TRANSACTION
 END

@@ -20,6 +20,7 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
+	BEGIN TRANSACTION
 	INSERT INTO [dbo].[Vehiculo]
            ([Id]
            ,[IdModelo]
@@ -39,4 +40,5 @@ BEGIN
 			,@CorreoPropietario
 			,@TelefonoPropietario)
 			SELECT @ID
+	COMMIT TRANSACTION
 END
